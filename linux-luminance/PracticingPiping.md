@@ -111,3 +111,13 @@ Ex:
 echo <(echo hi)
 OUTPUT: /dev/fd/63 <- acesta este path-ul of the named pipe file
 __
+
+##`mkfifo`
+**Categorie** Named pipes
+
+mkfifo /tmp/flag_fifo
+
+/challenge/run > /tmp/flag_fifo & <- & foarte important altfel se blocheaza
+terminalul
+
+_Pipe-uri cu nume utile cand au o problmea de low latency_
