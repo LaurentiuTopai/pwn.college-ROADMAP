@@ -77,3 +77,14 @@ ex:
 chmod u-r,g+rw,o-x ...
 chmod u=r,g=rw,o=x ...
 __
+
+
+hacker@dojo:~$ ls -l /usr/bin/sudo
+-rwsr-xr-x 1 root root 232416 Dec 1 11:45 /usr/bin/sudo
+hacker@dojo:~$
+The s part in place of the executable bit means that the program is
+executable with SUID.
+It means that, regardless of what user runs the program
+(as long as they have executable permissions), 
+the program will execute as the owner user (in this case, the root user).
+
